@@ -1,4 +1,4 @@
-ackage com.classesestaticas;
+package com.classesestaticas;
 
 public class Carro {
 
