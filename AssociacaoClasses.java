@@ -45,9 +45,6 @@ public class Aluno {
     public void setSeminario(Seminario seminario) {
         this.seminario = seminario;
     }
-
-
-
 }
 
 
@@ -182,7 +179,6 @@ public class Local {
     public void setBairro(String bairro) {
         this.bairro = bairro;
     }
-
 }
 
 
