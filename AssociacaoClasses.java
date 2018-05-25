@@ -6,8 +6,8 @@ public class Aluno {
 
 
     public Aluno(String nome, int id) {
-        this.nome = nome;
-        this.id = id;
+        nome = this.nome;
+        id = this.id;
     }
 
     public Aluno() {
