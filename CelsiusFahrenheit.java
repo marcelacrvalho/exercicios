@@ -6,7 +6,7 @@ public class ConverterCelsius {
     private double celsius;
 
     public ConverterCelsius (double fah){
-        this.fah = fah;
+        fah = this.fah;
     }
 
     public ConverterCelsius(){}
