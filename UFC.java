@@ -66,7 +66,7 @@ public class Lutador{
 
 
 
-package com.br.learningjava;
+ppackage com.br.learningjava;
 
 public class Luta extends Lutador{
 
@@ -86,16 +86,16 @@ public class Luta extends Lutador{
         }
     }
 
-    public void ganharLuta (Lutador lutador){
+    public void ganharLuta (){
         if(vaiAcontecer){
-            System.out.println("\nO campeão foiiiiiii " + lutador.getNome());
+            System.out.println("\nO campeão foiiiiiii " + super.getNome());
             super.ganhar += 1;
         }else{
             System.out.println("\nNão é possível ganhar essa luta");
         }
     }
 
-    public void empatarLuta (Lutador lutador, Lutador lutador2){
+    public void empatarLuta (){
         if (vaiAcontecer) {
             System.out.println("\nAmbos foram campeões!!!");
             super.empatar += 1;
@@ -104,7 +104,7 @@ public class Luta extends Lutador{
         }
     }
 
-    public void perderLuta(Lutador lutador){
+    public void perderLuta(){
         if (vaiAcontecer) {
             System.out.println("\nYOU LOSEEEEEE");
             super.perder += 1;
@@ -121,8 +121,6 @@ public class Luta extends Lutador{
         System.out.println("Lutas perdidas: " + super.perder);
         System.out.println("Lutas empadatas: " + super.empatar);
     }
-
-
 }
 
 
@@ -137,7 +135,7 @@ public class LutaTeste{
 
         Luta luta = new Luta();
         luta.marcarLuta(lutador, lutador2);
-        luta.empatarLuta(lutador, lutador2);
+        luta.empatarLuta();
         luta.verInfos(lutador);
     }
 }
