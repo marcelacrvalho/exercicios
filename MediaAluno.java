@@ -1,49 +1,76 @@
-package com.exercios;
+package basico.metodos;
 
-public class MediaAluno {
+public class Estudante {
 
-    private String nomeAluno;
+    private String nome;
+    private String matricula;
+    private double [] notas;
+    private double media = 0;
 
 
-    public String getNomeAluno() {
-        return nomeAluno;
+    public Estudante(String nome, String matricula) {
+        this.nome = nome;
+        this.matricula = matricula;
+
     }
 
-    public void setNomeAluno(String nomeAluno) {
-        this.nomeAluno = nomeAluno;
-    }
+    public Estudante() { }
 
-    public void notasALuno(double n1, double n2, double n3){
-        retornaMedia(n1, n2, n3);
-    }
 
-    private void retornaMedia (double n1, double n2, double n3){
-        double md;
-        md = (n1+n2+n3)/3;
-        System.out.println("A média de " + nomeAluno + " foi " + md);
-
-        if (md >= 7){
-            System.out.println("APROVADO (A)!!");
-        } else if (md < 4){
-            System.out.println("REPROVADO!!");
-        } else {
-            System.out.println("RECUPERAÇÃO!!");
+    public void calcularMedia(double [] notas){
+        for (double notaAluno : notas) {
+            media += notaAluno / 3;
         }
+        retonarSituacao();
+    }
+
+    private void retonarSituacao () {
+        if (media >= 7){
+            System.out.println("Aluno " + this.nome + " aprovado!");
+        } else if (media < 4){
+            System.out.println("Aluno " + this.nome + " reprovado");
+        } else {
+            System.out.println("Aluno " + this.nome + " fará recuperação");
+        }
+    }
+
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+
+    public Estudante(double[] notas) {
+        this.notas = notas;
+    }
+
+    public void setNotas(double[] notas) {
+        this.notas = notas;
     }
 }
 
 
-package Teste;
+package basico.metodos;
 
-import com.exercios.MediaAluno;
+public class EstudanteTest {
 
-public class MediaAlunoTeste
-{
     public static void main(String[] args) {
 
-        MediaAluno media = new MediaAluno();
+        Estudante estudante = new Estudante ("Marcela", "12345");
+        double [] notas = {10, 3, 3};
 
-        media.setNomeAluno("Marcela Carvalho");
-        media.notasALuno(6,9,6);
+        estudante.calcularMedia(notas);
     }
 }
