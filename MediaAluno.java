@@ -19,7 +19,7 @@ public class Estudante {
 
     public void calcularMedia(double [] notas){
         for (double notaAluno : notas) {
-            media += notaAluno / 3;
+            media += notaAluno / notas.length;
         }
         retonarSituacao();
     }
