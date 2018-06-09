@@ -50,15 +50,6 @@ public class Estudante {
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
-
-
-    public Estudante(double[] notas) {
-        this.notas = notas;
-    }
-
-    public void setNotas(double[] notas) {
-        this.notas = notas;
-    }
 }
 
 
