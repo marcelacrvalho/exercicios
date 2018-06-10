@@ -14,7 +14,6 @@ public enum TipoPagamento {
 }
 
 
-
 package basico.enumeracoes;
 
 public class Pessoa {
@@ -77,7 +76,6 @@ public class Pessoa {
         this.sexo = sexo;
     }
 }
-
 
 
 public class Cliente extends Pessoa {
