@@ -11,7 +11,7 @@ package basico.Finterfaces;
 public class Produto implements Tributavel{
 
     private String nome;
-    private double valorfinal;
+    private double valorImposto;
     private double valor;
     private double peso;
     private double valorFrete;
@@ -29,14 +29,14 @@ public class Produto implements Tributavel{
     @Override
     public String toString() {
         return this.nome + " - R$ " + this.valor +
-                "\nImposto R$ " + this.valorfinal +
+                "\nImposto R$ " + this.valorImposto +
                 "\nFrete de R$ " + this.valorFrete;
     }
 
 
     @Override
     public void calcularImposto() {
-        valorfinal = this.valor * 0.4;
+        valorImposto = this.valor * 0.4;
     }
 
 
