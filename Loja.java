@@ -130,7 +130,7 @@ public class LojaTest {
         Vendedor v = new Vendedor("Rodrigo", 1200, 10000);
         RelatorioPagamento r = new RelatorioPagamento();
 
-        r.pagamentoGerente(g); // faço minha variavel de relatorio referenciar a variavel g de Gerente
+        r.pagamentoGerente(g);
         System.out.println("------------------------------");
         r.pagamentoVendedor(v);
     }
