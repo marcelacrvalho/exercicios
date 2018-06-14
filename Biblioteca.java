@@ -51,7 +51,7 @@ public class Livro {
 }
 
 
-ppackage exerciciosbasico.livroBiblioteca;
+package exerciciosbasico.livroBiblioteca;
 
 import java.text.DateFormat;
 import java.util.Calendar;
