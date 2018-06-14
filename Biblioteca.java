@@ -51,13 +51,12 @@ public class Livro {
 }
 
 
-package exerciciosbasico.livroBiblioteca;
+ppackage exerciciosbasico.livroBiblioteca;
 
+import java.text.DateFormat;
 import java.util.Calendar;
 
 public class Leitor {
-
-    Calendar c = Calendar.getInstance();
 
     private String nome;
     private String registro;
@@ -73,18 +72,12 @@ public class Leitor {
 
 
     public void pegarLivro(Livro livro, Calendar calendar) {
-      calendar.add(Calendar.DAY_OF_WEEK, 5);
-        System.out.println(this.nome + " deverá devolver o livro no dia " + calendar.getTime());
+        calendar.add(Calendar.DAY_OF_WEEK, 5);
+        DateFormat df = DateFormat.getDateInstance();
+        DateFormat.getDateInstance(DateFormat.SHORT);
+        System.out.println(this.nome + " deverá devolver o livro no dia " + df.format(calendar.getTime()));
     }
 
-
-    public Calendar getC() {
-        return c;
-    }
-
-    public void setC(Calendar c) {
-        this.c = c;
-    }
 
     public String getNome() {
         return nome;
