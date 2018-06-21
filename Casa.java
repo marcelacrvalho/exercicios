@@ -40,7 +40,7 @@ public class Casa {
         } else if(porta2.isAberta()) {
             return totalAberta += 1;
         } else if(porta3.isAberta()) {
-            return totalAberta =+ 3;
+            return totalAberta += 1;
         }
         return 0;
     }
