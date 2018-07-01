@@ -5,8 +5,8 @@ import java.util.Objects;
 
 public class Data{
 
-    int chave;
-    Date date;
+    private int chave;
+    private Date date;
 
     public Data(int chave, Date date) {
         this.chave = chave;
