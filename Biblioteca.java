@@ -29,7 +29,6 @@ public class Biblioteca {
 
     public void devolverLivro(Calendar diaHoje) {
         System.out.println("Obrigada por devolver! Volte sempre!");
-
         if(diaHoje.compareTo(dataDevolucao) > 0) {
             System.out.println("Multa de R$ 10, 50");
         }
